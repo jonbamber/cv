@@ -1,0 +1,176 @@
+\documentclass[6pt,a4paper,ragged2e,withhyper]{altacv}
+
+\usepackage{paracol}
+
+\geometry{left=1.5cm,right=1.5cm,top=1.75cm,bottom=1.75cm,columnsep=1cm}
+
+% Colours
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\definecolor{Blue}{HTML}{327392}
+\definecolor{DarkBlue}{HTML}{024260}
+\colorlet{name}{black}
+\colorlet{tagline}{Blue}
+\colorlet{heading}{DarkBlue}
+\colorlet{headingrule}{Blue}
+\colorlet{subheading}{Blue}
+\colorlet{accent}{Blue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Fonts
+\usepackage[rm]{roboto}
+\usepackage[defaultsans]{lato}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\large\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\footnotesize\bfseries}
+
+\begin{document}
+
+  % Name & current job role
+  \name{Jon Bamber}
+  \tagline{DevOps Engineer}
+
+  % Contact information
+  \personalinfo{
+    \mailaddress{jon.bamber@hotmail.com}
+    \homepage{jonbamber.me.uk}
+    \linkedin{jonbamber}
+    \github{jonbamber}
+    \location{Norwich, UK}
+  }
+
+  \makecvheader
+
+  \columnratio{0.67}
+
+  \begin{paracol}{2}
+
+    \cvsection{Experience}
+
+    \cvevent{DevOps Engineer}{Aviva}{February 2019 -- Ongoing}{Norwich, UK}
+
+    \begin{itemize}
+      \item Worked as part of small tooling/run teams in an agile/scrum framework, both on-site and remotely
+      \item Employed a range of AWS sevices including VPC, EC2, EMR, Lambda, EFS, S3, AWS Backup, RDS, IAM, SNS, Route 53 and Cloudwatch
+      \item Analysed and reviewed designs for multiple RHEL-based data science applications hosted in AWS
+      \item Developed and maintained AWS-hosted applications using infrastructure as code, configuration management and automated testing
+      \item Developed and maintained automated CI pipelines for AWS infrastructure deployment using Jenkins
+      \item Implemented monitoring and alerting capabilities to track use of application resources
+    \end{itemize}
+
+    \vspace{-0.3cm}\divider
+
+    \cvevent{IT Consultant}{QA Consulting}{January 2019 -- Ongoing}{}
+
+    \vspace{-0.3cm}\divider
+
+    \cvevent{Sessional Lecturer in Applied Statistics}{University of Worcester}{September 2017 -- September 2018}{Worcester, UK}
+
+    \vspace{-0.3cm}\divider
+
+    \cvevent{Academic Researcher in Computational Neuroscience}{University of Edinburgh}{January 2013 -- July 2017}{Edinburgh, UK}
+
+    \smallskip
+
+    \cvsection{DevOps Training}
+
+    \cvevent{Systems Operations on AWS}{QA Manchester Centre}{February 2020}{Manchester, UK}
+
+    \begin{itemize}
+      \item Automatable and repeatable deployments of networks and systems on the AWS platform
+      \item AWS features and tools related to configuration and deployment
+      \item Common techniques used throughout the industry for configuring and deploying systems
+    \end{itemize}
+
+    \vspace{-0.3cm}\divider
+
+    \cvevent{DevOps Intensive training course}{QA Salford Centre}{October 2018 -- December 2018}{Salford, UK}
+
+    \begin{itemize}
+      \item IT fundamentals
+      \item Agile methods, consulting skills, project management and soft skills
+      \item Programming and DevOps tools
+    \end{itemize}
+
+    \switchcolumn
+
+    \cvsection{Tools}
+
+    \cvtag{AWS}
+    \cvtag{GCP}
+    \cvtag{Git}
+    \cvtag{GitHub}
+    \cvtag{Bitbucket}
+    \cvtag{Jenkins}
+    \cvtag{Terraform}\\
+    \cvtag{Packer}
+    \cvtag{Vault}
+    \cvtag{Ansible}
+    \cvtag{Docker}
+    \cvtag{Kubernetes}
+    \cvtag{VirtualBox}
+    \cvtag{Vagrant}
+    \cvtag{ServerSpec}
+    \cvtag{Artifactory}
+    \cvtag{Nexus}
+    \cvtag{VS Code}
+    \cvtag{Eclipse}
+    \cvtag{Pycharm}
+    \cvtag{Jira}
+    \cvtag{Confluence}
+
+    \smallskip
+
+    \cvsection{Languages}
+
+    \cvtag{Bash}
+    \cvtag{Python}
+    \cvtag{Java}
+    \cvtag{SQL}
+    \cvtag{R}
+    \cvtag{MATLAB}
+    \cvtag{\LaTeX}
+
+    \smallskip
+
+    \cvsection{OS}
+
+    \cvtag{Linux}
+    \cvtag{Windows}
+
+    \smallskip
+
+    \cvsection{Hard skills}
+
+    \cvtag{Infrastructure management}\\
+    \cvtag{Configuration management}\\
+    \cvtag{Automation}
+    \cvtag{Scripting}
+    \cvtag{Testing}\\
+    \cvtag{Documentation}
+
+    \smallskip
+
+    \cvsection{Soft skills}
+
+    \cvtag{Hard-working}
+    \cvtag{Clean coder}\\
+    \cvtag{Excellent communicator}\\
+    \cvtag{Critical thinker}
+    \cvtag{Problem solver}
+
+    \smallskip
+
+    \cvsection{Education}
+
+    \cvevent{MRes Neuroinformatics}{University of Edinburgh}{}{}
+    \cvevent{MSc Computational Science}{University of Manchester}{}{}
+    \cvevent{BSc Mathematics}{University of Manchester}{}{}
+
+  \end{paracol}
+
+\end{document}

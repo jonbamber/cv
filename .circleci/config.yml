@@ -1,0 +1,24 @@
+version: 2.1
+orbs:
+  terraform: 'circleci/terraform@1.1.0'
+jobs:
+  compile_cv:
+    docker:
+      - image: danteev/texlive
+    working_directory: ~/cv/tex
+    steps:
+      - checkout:
+          path: ~/cv
+      - run: wget https://raw.githubusercontent.com/liantze/AltaCV/108e60d66cedc74c16ecfe00a262323c8ec36d64/altacv.cls
+      - run: latexmk -pdf
+      - persist_to_workspace:
+          root: ./
+          paths: 
+            - bamber_jon_cv.pdf
+      - store_artifacts:
+          path: bamber_jon_cv.pdf
+workflows:
+  version: 2
+  compile_cv:
+    jobs:
+      - compile_cv

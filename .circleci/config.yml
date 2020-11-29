@@ -17,8 +17,25 @@ jobs:
             - bamber_jon_cv.pdf
       - store_artifacts:
           path: bamber_jon_cv.pdf
+  upload_cv:
+    executor: terraform/default
+    working_directory: ~/cv/terraform
+    steps:
+      - checkout:
+          path: ~/cv
+      - attach_workspace:
+          at: ./
+      - terraform/apply:
+          backend_config: "bucket=$TERRAFORM_STATE_BUCKET,key=$CIRCLE_PROJECT_REPONAME,region=$AWS_REGION"
 workflows:
   version: 2
-  compile_cv:
+  compile_and_upload_cv:
     jobs:
       - compile_cv
+      - upload_cv:
+          context: AWS
+          filters:
+            branches:
+              only: main
+          requires: 
+            - compile_cv

@@ -10,6 +10,7 @@ A CirceCI `config.yaml` file is included to:
 * compile the CV to a PDF
 * store the PDF as a CircleCI artifact
 * push the PDF to S3 for use with a [static website](https://github.com/jonbamber/personal_website)
+(`main` branch only)
 
 The CV can be compiled manually through:
 

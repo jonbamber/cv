@@ -7,10 +7,12 @@ This is LaTeX CV is written using the [`altacv` class](https://github.com/liantz
 A CirceCI `config.yaml` file is included to:
 
 * fetch the necessary LaTeX class file
-* compile the CV to a PDF
+* replace sensitive variables placeholders
+* compile CV TeX file to PDF
 * store the PDF as a CircleCI artifact
-* push the PDF to S3 for use with a [static website](https://github.com/jonbamber/personal_website)
-(`main` branch only)
+* `main` branch only:
+  * push the PDF to S3 for use with a [static website](https://github.com/jonbamber/personal_website)
+
 
 The CV can be compiled manually through:
 

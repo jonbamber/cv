@@ -1,4 +1,4 @@
-\documentclass[6pt,a4paper,ragged2e,withhyper]{altacv}
+\documentclass[a4paper,ragged2e,withhyper]{altacv}
 
 \usepackage{paracol}
 
@@ -22,16 +22,16 @@
 \usepackage[rm]{roboto}
 \usepackage[defaultsans]{lato}
 \renewcommand{\familydefault}{\sfdefault}
-\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\namefont}{\LARGE\rmfamily\bfseries}
 \renewcommand{\personalinfofont}{\footnotesize}
-\renewcommand{\cvsectionfont}{\large\rmfamily\bfseries}
+\renewcommand{\cvsectionfont}{\normalsize\rmfamily\bfseries}
 \renewcommand{\cvsubsectionfont}{\footnotesize\bfseries}
 
 \begin{document}
 
   % Name & current job role
   \name{Jon Bamber}
-  \tagline{DevOps Engineer}
+  \tagline{DevSecOps Engineer}
 
   % Contact information
   \personalinfo{
@@ -44,133 +44,169 @@
 
   \makecvheader
 
-  \columnratio{0.67}
+  \columnratio{0.64}
 
   \begin{paracol}{2}
 
+    \cvsection{Qualifications}
+
+    \begin{itemize}[leftmargin=0.75cm]
+      \begin{small}
+        \item CompTIA Security+
+        \item QA Certificate in Digital Forensics Fundamentals
+        \item QA Certified in the Art of Hacking
+        \item QA Practitioner Certificate in Cloud Security
+        \item BCS-registered IT Technician (RITTech)
+      \end{small}
+    \end{itemize}
+
+    \smallskip
+
     \cvsection{Experience}
 
-    \cvevent{DevOps Engineer}{Aviva}{February 2019 -- Ongoing}{Norwich, UK}
-
-    \begin{itemize}
-      \item Worked as an integral part of a small team in an agile/scrum framework, both on-site and remotely
-      \item Employed a range of AWS services including VPC, EC2, EMR, Lambda, EFS, S3, AWS Backup, RDS, IAM, SNS, Route 53 and Cloudwatch
-      \item Analysed and reviewed technical infrastructure designs for the hosting of multiple RHEL-based data science applications in AWS
-      \item Developed and maintained AWS-hosted applications using infrastructure-as-code, configuration management and automated testing
-      \item Developed and maintained automated CI pipelines for deployment of AWS infrastructure
-      \item Implemented monitoring \& alerting systems for tracking use of application resources
-      \item Maintained effective relationships with customers \& stakeholders
+    \cvevent{IT Consultant}{QA Consulting}{October 2018 -- Ongoing}{UK}
+    \begin{itemize}[leftmargin=0.75cm]
+      \begin{small}
+        \item Worked with clients in specialised IT areas
+        \item Continued specialist training and professional development
+      \end{small}
     \end{itemize}
 
     \vspace{-0.3cm}\divider
 
-    \cvevent{IT Consultant}{QA Consulting}{October 2018 -- Ongoing}{}
+    \cvevent{DevOps Engineer}{Aviva}{February 2019 -- February 2021}{Norwich, UK}
+    \begin{itemize}[leftmargin=0.75cm]
+      \begin{small}
+        \item Worked as an integral part of a small team in an Agile/Scrum framework, both on-site and remotely
+        \item Employed a range of AWS services including VPC, EC2, EMR, Lambda, EFS, S3, Backup, RDS, IAM, SNS, Route 53 and Cloudwatch
+        \item Analysed and reviewed technical infrastructure designs for hosting multiple RHEL-based data science applications in AWS
+        \item Configured and maintained AWS-hosted applications using infrastructure-as-code, configuration management and automated testing
+        \item Developed and maintained automated pipelines for deployment of AWS infrastructure
+        \item Implemented monitoring \& alerting systems for tracking use of application resources
+        \item Maintained effective relationships with customers \& stakeholders
+      \end{small}
+    \end{itemize}
 
     \vspace{-0.3cm}\divider
 
     \cvevent{Sessional Lecturer in Applied Statistics}{University of Worcester}{August 2017 -- September 2018}{Worcester, UK}
 
-    \vspace{-0.3cm}\divider
-
-    \cvevent{Academic Researcher in Computational Neuroscience}{University of Edinburgh}{January 2013 -- July 2017}{Edinburgh, UK}
-
-    \smallskip
-
-    \cvsection{DevOps Training}
-
-    \cvevent{Systems Operations on AWS}{QA Manchester Centre}{February 2020}{Manchester, UK}
-
-    \begin{itemize}
-      \item Automatable and repeatable deployments of networks and systems on the AWS platform
-      \item AWS features and tools related to configuration and deployment
-      \item Common techniques used throughout the industry for configuring and deploying systems
+    \begin{itemize}[leftmargin=0.75cm]
+      \begin{small}
+        \item Available for giving lectures on requested statistical methods
+      \end{small}
     \end{itemize}
 
     \vspace{-0.3cm}\divider
 
-    \cvevent{DevOps Intensive training course}{QA Salford Centre}{October 2018 -- December 2018}{Salford, UK}
+    \cvevent{Researcher in Computational Neuroscience}{University of Edinburgh}{January 2013 -- July 2017}{Edinburgh, UK}
 
-    \begin{itemize}
-      \item DevOps \& programming tools
-      \item Agile methods, consulting skills, project management and soft skills
-      \item IT fundamentals
+    \begin{itemize}[leftmargin=0.75cm]
+      \begin{small}
+        \item Iteratively generated and tested scientific hypotheses
+        \item Created and applied bespoke statistical and information-theoretic data analysis tools
+        \item Developed computational models explaining observed phenomena
+        \item Reported findings in documents, presentations, papers etc.
+      \end{small}
     \end{itemize}
 
     \switchcolumn
 
-    \cvsection{Tools}
+    \cvsection{DevOps Tools}
 
-    \cvtag{AWS}
-    \cvtag{Git}
-    \cvtag{GitHub}
-    \cvtag{Bitbucket}
-    \cvtag{Jenkins}
-    \cvtag{CircleCI}
-    \cvtag{Terraform}
-    \cvtag{Packer}
-    \cvtag{Vault}
-    \cvtag{Ansible}
-    \cvtag{Docker}
-    \cvtag{Kubernetes}
-    \cvtag{VirtualBox}
-    \cvtag{Vagrant}
-    \cvtag{ServerSpec}
-    \cvtag{Artifactory}
-    \cvtag{Nexus}
-    \cvtag{VS Code}
-    \cvtag{Eclipse}
-    \cvtag{Pycharm}
-    \cvtag{Jira}
-    \cvtag{Confluence}
+    \cvtag{\footnotesize AWS}
+    \cvtag{\footnotesize Git}
+    \cvtag{\footnotesize GitHub}
+    \cvtag{\footnotesize Bitbucket/Stash}
+    \cvtag{\footnotesize Docker}
+    \cvtag{\footnotesize Kubernetes}
+    \cvtag{\footnotesize Terraform}
+    \cvtag{\footnotesize Vault}
+    \cvtag{\footnotesize Packer}
+    \cvtag{\footnotesize Ansible}
+    \cvtag{\footnotesize VirtualBox}
+    \cvtag{\footnotesize Vagrant}
+    \cvtag{\footnotesize Jenkins}
+    \cvtag{\footnotesize CircleCI}
+    \cvtag{\footnotesize ServerSpec}
+    \cvtag{\footnotesize Nexus}
+    \cvtag{\footnotesize Artifactory}
+
+    \smallskip
+
+    \cvsection{Cyber Security Tools}
+
+    \cvtag{\footnotesize Wireshark}
+    \cvtag{\footnotesize Burp}
+    \cvtag{\footnotesize Nmap}
+    \cvtag{\footnotesize Metasploit}
+    \cvtag{\footnotesize JtR}
+    \cvtag{\footnotesize Hydra}
+    \cvtag{\footnotesize Autopsy}
+    \cvtag{\footnotesize HxD}
+
+    \smallskip
+
+    \cvsection{Project Management}
+
+    \cvtag{\footnotesize Agile/Scrum}
+    \cvtag{\footnotesize Jira}
+    \cvtag{\footnotesize Confluence}
+
+    \cvsection{IDEs}
+
+    \cvtag{\footnotesize VS Code}
+    \cvtag{\footnotesize Eclipse}
+    \cvtag{\footnotesize Pycharm}
 
     \smallskip
 
     \cvsection{Languages}
 
-    \cvtag{Bash}
-    \cvtag{Python}
-    \cvtag{Groovy}
-    \cvtag{Java}
-    \cvtag{SQL}
-    \cvtag{R}
-    \cvtag{MATLAB}
-    \cvtag{\LaTeX}
+    \cvtag{\footnotesize Bash}
+    \cvtag{\footnotesize Python}
+    \cvtag{\footnotesize Groovy}
+    \cvtag{\footnotesize Java}
+    \cvtag{\footnotesize SQL}
+    \cvtag{\footnotesize R}
+    \cvtag{\footnotesize MATLAB}
+    \cvtag{\footnotesize \LaTeX}
 
     \smallskip
 
-    \cvsection{OS}
+    \cvsection{Operating Systems}
 
-    \cvtag{Linux}
-    \cvtag{Windows}
+    \cvtag{\footnotesize Linux}
+    \cvtag{\footnotesize Windows}
 
     \smallskip
 
     \cvsection{Hard skills}
 
-    \cvtag{Infrastructure management}\\
-    \cvtag{Configuration management}\\
-    \cvtag{Automation}
-    \cvtag{Scripting}
-    \cvtag{Testing}\\
-    \cvtag{Documentation}
-
+    \cvtag{\footnotesize Infrastructure management}
+    \cvtag{\footnotesize Automation}\\
+    \cvtag{\footnotesize Configuration management}
+    \cvtag{\footnotesize Scripting}
+    \cvtag{\footnotesize Testing}
+    \cvtag{\footnotesize Documentation}
+    
     \smallskip
 
     \cvsection{Soft skills}
 
-    \cvtag{Hard-working}
-    \cvtag{Clean coder}\\
-    \cvtag{Excellent communicator}\\
-    \cvtag{Critical thinker}
-    \cvtag{Problem solver}
+    \cvtag{\footnotesize Hard worker}
+    \cvtag{\footnotesize Clean coder}
+    \cvtag{\footnotesize Critical thinker}
+    \cvtag{\footnotesize Problem solver}
+    \cvtag{\footnotesize Excellent communicator}
 
     \smallskip
 
     \cvsection{Education}
 
-    \cvevent{BSc Mathematics}{University of Manchester}{}{}
-    \cvevent{MSc Computational Science}{University of Manchester}{}{}
-    \cvevent{MRes Neuroinformatics}{University of Edinburgh}{}{}
+    \cvevent{\normalsize BSc Mathematics}{\small University of Manchester}{}{}
+    \cvevent{\normalsize MSc Computational Science}{\small University of Manchester}{}{}
+    \cvevent{\normalsize MRes Neuroinformatics}{\small University of Edinburgh}{}{}
 
   \end{paracol}
 

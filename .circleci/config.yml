@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   terraform: circleci/terraform@1.1.0
 jobs:
-  compile_cv:
+  Compile CV:
     docker:
       - image: texlive/texlive:latest
     working_directory: ~/cv/tex
@@ -27,7 +27,7 @@ jobs:
             - bamber_jon_cv.pdf
       - store_artifacts:
           path: bamber_jon_cv.pdf
-  upload_cv:
+  Upload CV:
     executor: terraform/default
     working_directory: ~/cv/terraform
     steps:
@@ -40,11 +40,11 @@ jobs:
           var: domain_name=${WEBSITE}
 workflows:
   version: 2
-  compile_and_upload_cv:
+  Compile & upload CV:
     jobs:
-      - compile_cv:
+      - Compile CV:
           context: personal
-      - upload_cv:
+      - Upload CV:
           context: 
             - personal
             - AWS
@@ -52,4 +52,4 @@ workflows:
             branches:
               only: main
           requires: 
-            - compile_cv
+            - Compile CV

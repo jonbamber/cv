@@ -4,7 +4,7 @@ orbs:
 jobs:
   Compile CV:
     docker:
-      - image: texlive/texlive:latest
+      - image: texlive/texlive@sha256:6e90a166ee565a10604e6a3fca69740aed8f739d9026ee14a31be0ca8567ea1e
     working_directory: ~/cv/tex
     steps:
       - checkout:

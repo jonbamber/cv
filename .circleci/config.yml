@@ -23,7 +23,7 @@ jobs:
           command: latexmk -pdf
       - persist_to_workspace:
           root: ./
-          paths: 
+          paths:
             - bamber_jon_cv.pdf
       - store_artifacts:
           path: bamber_jon_cv.pdf
@@ -56,17 +56,17 @@ workflows:
       - Compile CV:
           context: personal
       - Plan CV upload:
-          context: 
+          context:
             - personal
-            - AWS     
-          requires: 
+            - AWS
+          requires:
             - Compile CV
       - Upload CV:
-          context: 
+          context:
             - personal
             - AWS
           filters:
             branches:
               only: main
-          requires: 
+          requires:
             - Plan CV upload

@@ -40,221 +40,22 @@
 \renewcommand{\labelitemi}{$\bullet$}
 \renewcommand{\labelitemii}{$\circ$}
 
-% set the ratio of column widths (proportion taken up by left column)
-\columnratio{0.59}
-
-% set details for the CV header (name, job title & contact info)
-\name{Jon Bamber}
-\tagline{DevOps Engineer}
-\personalinfo{
-  \mailaddress{REPLACE_ME_FROM_EVIRONMENT_email_REPLACE_ME_FROM_ENVIRONMENT}
-  \homepage{REPLACE_ME_FROM_EVIRONMENT_website_REPLACE_ME_FROM_ENVIRONMENT}
-  \linkedin{jonbamber}
-  \github{jonbamber}
-  \location{Cardiff, UK}
-}
+\input{./cv_sections/cv_header.tex}
 
 %===============================
 
 % start of the document
 \begin{document}
 
-\makecvheader % make CV header
+  \makecvheader
 
-\begin{paracol}{2}
+  \vspace{0.5cm}
+  \input{./cv_sections/summary.tex}
 
-  %=============================== FIRST COLUMN ===============================
+  \vspace{0.5cm}
+  \input{./cv_sections/experience.tex}
 
-  \cvsection{Experience}
-
-  %===============================
-
-  % job details
-  \cvevent{DevOps Engineer}{
-    \href{https://www.mobilise.cloud/}{Mobilise Cloud}
-  }{Jun 2021 -- Ongoing}{Cardiff, UK}
-  \begin{itemize}[leftmargin=0.5cm]
-    \begin{small}
-      \item Worked in agile multi-functional teams on projects for various clients
-      \item Managed AWS \& Azure resources with Terraform and other IaC tools
-      \item Used Packer \& Ansible to develop golden virtual machine images
-      \item Developed and deployed serverless Lambda Functions \& Logic Apps
-      \item Designed \& implemented pipelines (Azure DevOps \& GitLab CI) for:
-      \begin{itemize}\vspace{0.15cm}
-        \item infrastructure deployment/configuration
-        \item application build \& release to Azure App Service
-        \item monitoring \& alerting solutions for infrastructure and apps
-        \item automated static analysis
-        \item automated functional testing
-        \item Power Platform application lifecycle management
-      \end{itemize}
-    \end{small}
-  \end{itemize}
-
-  %===============================
-  \vspace{-0.2cm}\divider\vspace{-0.1cm}
-  %===============================
-
-  % job details
-  \cvevent{DevOps Engineer}{
-    \href{https://www.aviva.co.uk}{Aviva}
-  }{February 2019 -- February 2021}{Norwich, UK}
-  \begin{itemize}[leftmargin=0.75cm]
-    \begin{small}
-      \item Worked as an integral part of a small Agile team
-      \item Maintained RHEL-based data science applications hosted in AWS
-      \item Configured and maintained 3-tier web applications
-      \item Created and managed AWS infrastructure using Terraform
-      \item Created virtual machine images using Packer \& Ansible
-      \item Developed and maintained Jenkins pipelines for deployment \& testing of Cloud infrastructure
-      \item Implemented monitoring \& alerting systems for tracking resource use
-      \item Analysed and reviewed technical infrastructure designs
-    \end{small}
-  \end{itemize}
-
-  %===============================
-  \vspace{-0.2cm}\divider\vspace{-0.1cm}
-  %===============================
-
-  % job details
-  \cvevent{IT Consultant}{
-    \href{https://www.qa.com}{QA Consulting}
-  }{October 2018 -- Jun 2022}{UK}
-  \begin{itemize}[leftmargin=0.75cm]
-    \begin{small}
-      \item Worked with various clients on DevOps projects
-      \item Built and maintained Cloud infrastructure using Terraform
-      \item Developed machine images using Packer \& Ansible
-      \item Implemented pipelines for automated builds/deployments
-    \end{small}
-  \end{itemize}
-
-  %=============================== SECOND COLUMN ===============================
-  \switchcolumn
-
-  \vspace{-0.04cm}
-
-  %===============================
-
-  % details about vocational qualifications
-  \cvsection{Certifications}
-
-  \begin{itemize}[leftmargin=0.5cm]
-    \begin{small}
-      \item \href{https://www.credly.com/badges/4d6f1742-7c27-4d07-ba0d-964210b6a2e5/public_url}{AWS Certified Solutions Architect Associate}
-      \item \href{https://www.credly.com/badges/51e0bffd-6a77-4d74-adce-40c06015ce86/public_url}{AWS Certified Developer Associate}
-      \item \href{https://www.credly.com/badges/5db53ec6-0fb1-4ae4-99c7-6a1b3ac22302/public_url}{AWS Certified Cloud Practitioner}
-      \item \href{https://learn.microsoft.com/api/credentials/share/en-gb/jonbamber/DFC55B2EE2422F60?sharingId=817C402C89755A08}{MS Certified: Azure Administrator Associate}
-      \item \href{https://learn.microsoft.com/api/credentials/share/en-gb/jonbamber/508432A7F7252B38?sharingId=817C402C89755A08}{MS Certified: Azure Fundamentals}
-      \item \href{https://www.credly.com/badges/357158a5-75ae-4649-97eb-cc1c9829b2f9}{CompTIA Security+}
-      \item \href{https://aspen.eccouncil.org/VerifyBadge?type=certification&a=UR85u9BGOO5V+b6Nq1cbrqvuDkKDQsqZVZzAAnDrtQc=}{EC-Council Certified Ethical Hacker}
-      \item \href{https://www.credly.com/badges/00ee07f4-0640-40a3-b4b5-5a6d65f5a2df}{NIST Cybersecurity Framework Professional Practitioner}
-    \end{small}
-  \end{itemize}
-
-  %===============================
-
-  % tags for DevOps tools
-  \cvsection{DevOps Tools}
-
-  \cvtag{\footnotesize AWS}
-  \cvtag{\footnotesize Azure}
-  \cvtag{\footnotesize Git}
-  \cvtag{\footnotesize Terraform}
-  \cvtag{\footnotesize Packer}
-  \cvtag{\footnotesize Docker}
-  \cvtag{\footnotesize Ansible}
-  \cvtag{\footnotesize Bitbucket}
-  \cvtag{\footnotesize Azure DevOps}
-  \cvtag{\footnotesize Azure Pipelines}
-  \cvtag{\footnotesize GitLab CI}
-  \cvtag{\footnotesize GitHub Actions}
-  \cvtag{\footnotesize Jenkins}
-  \cvtag{\footnotesize CircleCI}
-
-  \smallskip
-
-  %===============================
-
-  % tags for programming languages
-  \cvsection{Languages}
-
-  \cvtag{\footnotesize YAML}
-  \cvtag{\footnotesize JSON}
-  \cvtag{\footnotesize HCL}
-  \cvtag{\footnotesize Python}
-  \cvtag{\footnotesize PowerShell}\\
-  \cvtag{\footnotesize Bash}
-
-  \smallskip
-
-  %===============================
-
-  % tags for project management 
-  \cvsection{Project Management}
-
-  \cvtag{\footnotesize Agile/Scrum}
-  \cvtag{\footnotesize Kanban}
-  \cvtag{\footnotesize Azure Boards}
-  \cvtag{\footnotesize Jira}
-  \cvtag{\footnotesize Confluence}
-  \cvtag{\footnotesize Slack}
-  \cvtag{\footnotesize Teams}
-
-  \smallskip
-
-  %===============================
-
-  % tags for hard skills
-  \cvsection{Hard skills}
-
-  \cvtag{\footnotesize CI/CD}
-  \cvtag{\footnotesize IaC}
-  \cvtag{\footnotesize Automation}
-  \cvtag{\footnotesize Scripting}\\
-  \cvtag{\footnotesize Configuration management}
-  \cvtag{\footnotesize Documentation}
-
-  \smallskip
-
-  %===============================
-
-  % tags for soft skills
-  \cvsection{Soft skills}
-
-  \cvtag{\footnotesize Hard worker}
-  \cvtag{\footnotesize Clean coder}
-  \cvtag{\footnotesize Critical thinker}
-  \cvtag{\footnotesize Problem solver}
-  \cvtag{\footnotesize Excellent communicator}
-
-  \smallskip
-
-  %===============================
-
-  % details of university education
-
-  \cvsection{Education}
-
-  \cvevent{\normalsize MSc Cloud Computing (\emph{ongoing})}{
-    \small
-    \href{https://www.mtu.ie/}{Munster Technological University}
-  }{}{}
-  \cvevent{\normalsize MRes Neuroinformatics}{
-    \small
-    \href{https://www.ed.ac.uk}{University of Edinburgh}
-  }{}{}
-  \cvevent{\normalsize MSc Computational Science}{
-    \small
-    \href{https://www.manchester.ac.uk}{University of Manchester}
-  }{}{}
-  \cvevent{\normalsize BSc Mathematics}{
-    \small
-    \href{https://www.manchester.ac.uk}{University of Manchester}
-  }{}{}
-
-  %===============================
-
-\end{paracol}
+  \newpage
+  \input{./cv_sections/skills.tex}
 
 \end{document}

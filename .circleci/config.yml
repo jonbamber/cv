@@ -14,16 +14,16 @@ jobs:
           command: wget https://raw.githubusercontent.com/liantze/AltaCV/108e60d66cedc74c16ecfe00a262323c8ec36d64/altacv.cls
       - run:
           name: Replace email address placeholder
-          command: ls *.tex | xargs sed -i "s/REPLACE_ME_FROM_EVIRONMENT_email_REPLACE_ME_FROM_ENVIRONMENT/${EMAIL}/g"
+          command: ls ./cv_sections/*.tex | xargs sed -i "s/REPLACE_ME_FROM_ENVIRONMENT_email_REPLACE_ME_FROM_ENVIRONMENT/${EMAIL}/g"
       - run:
           name: Replace website address placeholder
-          command: ls *.tex | xargs sed -i "s/REPLACE_ME_FROM_EVIRONMENT_website_REPLACE_ME_FROM_ENVIRONMENT/${WEBSITE}/g"
+          command: ls ./cv_sections/*.tex | xargs sed -i "s/REPLACE_ME_FROM_ENVIRONMENT_website_REPLACE_ME_FROM_ENVIRONMENT/${WEBSITE}/g"
       - run:
           name: Compile LaTeX document
           command: latexmk -pdf
       - persist_to_workspace:
           root: ./
-          paths: 
+          paths:
             - bamber_jon_cv.pdf
       - store_artifacts:
           path: bamber_jon_cv.pdf
@@ -56,17 +56,17 @@ workflows:
       - Compile CV:
           context: personal
       - Plan CV upload:
-          context: 
+          context:
             - personal
-            - AWS     
-          requires: 
+            - AWS
+          requires:
             - Compile CV
       - Upload CV:
-          context: 
+          context:
             - personal
             - AWS
           filters:
             branches:
               only: main
-          requires: 
+          requires:
             - Plan CV upload
